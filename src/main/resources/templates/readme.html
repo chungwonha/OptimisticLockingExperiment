@@ -13,9 +13,18 @@ and open the template in the editor.
     <body>
         <div>
             <ol>
-                <li>When a locally referenced entity is not same version as one in DB and you attempt to save/commit, you will get OptimisticLockingException.</li>
+                <li>
+                Challenge: how to reproduce the optimistic locking exception is unknown.
+                </li>            
+                <li>Regardless multiple sessions/threads or not, when a locally referenced entity is not same version/object id as one in DB and you attempt to save/commit, you will get OptimisticLockingException.</li>
                 <li>org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : 
                 [com.example.demo.optimisticLockingExperiment.Customer#1]</li>
+                <li>
+                    Solutions: Instead using one locally referenced, use one from db and replace with new values.
+                </li>
+            </ol>
+            <ol>
+                
             </ol>
         </div>
     </body>
